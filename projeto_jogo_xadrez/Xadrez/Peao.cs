@@ -1,0 +1,90 @@
+class Peao : Peca{
+    private PartidaDeXadrez Partida;
+    public Peao(Tabuleiro tab, Cor cor, PartidaDeXadrez partida) : base(tab, cor){     
+        Partida = partida;
+    }
+    public override string ToString(){
+        return "P";
+    }
+
+    private bool ExisteInimigo(Posicao pos){
+        Peca p = Tabuleiro.GetPeca(pos);
+        return p != null && p.Cor != Cor;
+    }
+    private bool Livre(Posicao pos){
+        return Tabuleiro.GetPeca(pos) == null;
+    }
+    public override bool[,] MovimentosPossiveis()
+    {
+        bool[,] mat = new bool[Tabuleiro.Linhas, Tabuleiro.Colunas];
+
+        Posicao pos = new Posicao(0,0);
+        
+        if (Cor == Cor.Branca){
+            pos.DefinirPosicao(Posicao.Linha - 1, Posicao.Coluna);
+            if (Tabuleiro.PosicaoValida(pos) && Livre(pos)){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            pos.DefinirPosicao(Posicao.Linha - 2, Posicao.Coluna);
+            if (Tabuleiro.PosicaoValida(pos) && Livre(pos) && QtdMovimentos == 0){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            pos.DefinirPosicao(Posicao.Linha - 1, Posicao.Coluna - 1);
+            if (Tabuleiro.PosicaoValida(pos) && ExisteInimigo(pos)){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            pos.DefinirPosicao(Posicao.Linha - 1, Posicao.Coluna + 1);
+            if (Tabuleiro.PosicaoValida(pos) && ExisteInimigo(pos)){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+
+            //#jogadaespecial En Passant
+            if (Posicao.Linha == 3){
+                Posicao esquerda = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
+                if (Tabuleiro.PosicaoValida(esquerda) && ExisteInimigo(esquerda) && Tabuleiro.GetPeca(esquerda) == Partida.VulneravelEnPassant){
+                    mat[esquerda.Linha - 1, esquerda.Coluna] = true;
+                }
+            }
+            if (Posicao.Linha == 3){
+                Posicao direita = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
+                if (Tabuleiro.PosicaoValida(direita) && ExisteInimigo(direita) && Tabuleiro.GetPeca(direita) == Partida.VulneravelEnPassant){
+                    mat[direita.Linha - 1, direita.Coluna] = true;
+                }
+            }
+        }
+        else{
+            pos.DefinirPosicao(Posicao.Linha + 1, Posicao.Coluna);
+            if (Tabuleiro.PosicaoValida(pos) && Livre(pos)){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            pos.DefinirPosicao(Posicao.Linha + 2, Posicao.Coluna);
+            if (Tabuleiro.PosicaoValida(pos) && Livre(pos) && QtdMovimentos == 0){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            pos.DefinirPosicao(Posicao.Linha + 1, Posicao.Coluna - 1);
+            if (Tabuleiro.PosicaoValida(pos) && ExisteInimigo(pos)){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            pos.DefinirPosicao(Posicao.Linha + 1, Posicao.Coluna + 1);
+            if (Tabuleiro.PosicaoValida(pos) && ExisteInimigo(pos)){
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+
+            //#jogadaespecial En Passant
+            if (Posicao.Linha == 4){
+                Posicao esquerda = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
+                if (Tabuleiro.PosicaoValida(esquerda) && ExisteInimigo(esquerda) && Tabuleiro.GetPeca(esquerda) == Partida.VulneravelEnPassant){
+                    mat[esquerda.Linha + 1, esquerda.Coluna] = true;
+                }
+            }
+            if (Posicao.Linha == 4){
+                Posicao direita = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
+                if (Tabuleiro.PosicaoValida(direita) && ExisteInimigo(direita) && Tabuleiro.GetPeca(direita) == Partida.VulneravelEnPassant){
+                    mat[direita.Linha + 1, direita.Coluna] = true;
+                }
+            }
+        }
+
+        return mat;
+    }
+}

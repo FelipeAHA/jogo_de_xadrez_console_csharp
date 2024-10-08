@@ -1,0 +1,14 @@
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\projeto_jogo_xadrez.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\projeto_jogo_xadrez.AssemblyInfoInputs.cache
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\projeto_jogo_xadrez.AssemblyInfo.cs
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\projeto_jogo_xadrez.csproj.CoreCompileInputs.cache
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\bin\Debug\net8.0\projeto_jogo_xadrez.exe
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\bin\Debug\net8.0\projeto_jogo_xadrez.deps.json
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\bin\Debug\net8.0\projeto_jogo_xadrez.runtimeconfig.json
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\bin\Debug\net8.0\projeto_jogo_xadrez.dll
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\bin\Debug\net8.0\projeto_jogo_xadrez.pdb
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\projeto_jogo_xadrez.dll
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\refint\projeto_jogo_xadrez.dll
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\projeto_jogo_xadrez.pdb
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\projeto_jogo_xadrez.genruntimeconfig.cache
+C:\Users\felip\Desktop\ADS\C#\Projetos\curso_c#_udemy\projeto_jogo_xadrez\obj\Debug\net8.0\ref\projeto_jogo_xadrez.dll
